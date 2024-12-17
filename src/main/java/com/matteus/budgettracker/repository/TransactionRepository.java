@@ -1,4 +1,4 @@
-package com.matteus.budgettracker.Repository;
+package com.matteus.budgettracker.repository;
 
 
 import com.matteus.budgettracker.model.Transaction;

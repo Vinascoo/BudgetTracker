@@ -1,8 +1,8 @@
-package com.matteus.budgettracker.model;
+package com.matteus.budgettracker.controller;
 
 
 import com.matteus.budgettracker.model.Transaction;
-import com.matteus.budgettracker.Repository.TransactionRepository;
+import com.matteus.budgettracker.repository.TransactionRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,4 +25,10 @@ public class TransactionController {
     public Transaction createTransaction(@RequestBody Transaction transaction) {
         return repository.save(transaction);
     }
+    // DELETE endpoint to remove a transaction
+    @DeleteMapping("/{id}")
+    public void deleteTransaction(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
 }
+
